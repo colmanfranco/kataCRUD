@@ -21,7 +21,7 @@
             <ul>
                 <li class="nav">Quienes somos</li>
                 <li class="nav">Nuestr@s coders</li>
-                <li class="nav">Empresas</li>
+                <li class="nav"><a href="empresa">Empresas</a></li>
                 <li class="nav">Encuentros</li>
                 <li class="nav">Recursos</li>
             </ul>

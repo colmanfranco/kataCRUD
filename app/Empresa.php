@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Empresa extends Model
 {
@@ -11,6 +12,6 @@ class Empresa extends Model
     
     public function opinion()
     {
-        return $this->hasMany('App\Opinion');
+        return HasMany(Opinion::class);
     }
 }

@@ -19,5 +19,6 @@ Route::get('/kata', 'KataController@index')->name('home');
 
 Route::resource ('kata', 'KataController');
 Route::resource ('empresa', 'EmpresaController');
+Route::resource('opinion', 'OpinionController');
 
 Route::get('/kataSent/{id}','KataController@kataSent');

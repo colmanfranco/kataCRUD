@@ -24,5 +24,26 @@
 </div>
 <form method="GET" action="/empresa/{{$empresa->id}}/edit">
     <input class="botonLista" type="submit" value="Editar">
-</form> 
+</form>
+
+@foreach ($opiniones as $opinion)
+    <div class="titulo">Username: {{$opinion->username}}</div>
+    <div class="titulo">Rating: {{$opinion->rating}}</div>
+    <div class="titulo">Review: {{$opinion->review}}</div>
+@endforeach
+
+<form action="/opinion" method="POST">
+        @csrf
+        <br>
+        <label class="campos">Username</label>
+        <input class="campos" type="text" name="username" value="{{$opinion->username}}">
+        <br>
+        <label class="campos">Rating (1 to 5)</label>
+        <input class="campos" type="text" name="rating" value="{{$opinion->rating}}">
+        <br>
+        <label class="campos">Opinión</label>
+        <input class="campos" type="text" name="review" value="{{$opinion->review}}">
+        <br>
+        <a href="/empresa/{{$empresa->id}}" type="submit" class="boton">Submit Opinion</a>
+</form>
 @endsection

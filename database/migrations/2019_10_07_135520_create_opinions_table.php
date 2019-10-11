@@ -15,10 +15,12 @@ class CreateOpinionsTable extends Migration
     {
         Schema::create('opinions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
             $table->string('username');
             $table->string('review');
             $table->integer('rate');
+            $table->integer('empresa_id')->references('id')->on('empresas')->onDelete('cascade');
+            $table->timestamps();
+
         });
     }
 

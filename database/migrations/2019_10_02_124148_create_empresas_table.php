@@ -19,10 +19,7 @@ class CreateEmpresasTable extends Migration
             $table->string('headquarters');
             $table->string('url_iframe');
             $table->string('url_pic_hq');
-            $table->integer('rating');
-            $table->string('review');
             $table->integer('anual_salary');
-            $table->integer('job_offer_id');
             $table->timestamps();
         });
     }

@@ -9,7 +9,8 @@ class OpinionController extends Controller
 {
     public function index()
     {
-        //
+        $opiniones = Opinion::all();
+        return view('empresa', compact('opiniones'));
     }
 
     public function create()
